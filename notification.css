@@ -1,20 +1,22 @@
 
 #notifications {
   position: fixed;
-  top: 10px;
-  right: 15px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #notifications li {
-  margin-bottom: 5px;
   list-style: none;
 }
 
 .notification {
   position: relative;
-  max-width: 600px;
+  width: 100%;
   min-width: 250px;
-  border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   background: white;
   z-index: 100;
 }
@@ -26,13 +28,15 @@
 .notification .title {
   margin: 0 0 5px 0;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .notification p {
   margin: 0;
   padding: 0;
   font-size: .9em;
+  display: inline-block;
+  margin-left: 1ex;
 }
 
 .notification .close {
@@ -42,6 +46,16 @@
   text-decoration: none;
   color: #888;
   display: none;
+}
+
+.notification {
+  background: aliceblue;
+}
+.notification.warn {
+  background: cornsilk;
+}
+.notification.error {
+  background: orange;
 }
 
 .notification.closable .close {
@@ -60,7 +74,7 @@
 
 .notification .close {
   position: absolute;
-  top: 3px;
+  top: 14px;
   right: 10px;
   text-decoration: none;
   color: #888;
